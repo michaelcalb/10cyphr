@@ -1,3 +1,31 @@
 .page {
-  font-family: var(--font-geist-sans);
+    font-family: var(--font-geist-sans);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-pixel);
+    gap: 1rem;
+    
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ezContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    border: 1px solid #222222;
+    padding: 2rem;
 }
