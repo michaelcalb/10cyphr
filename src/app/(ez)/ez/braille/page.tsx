@@ -1,5 +1,5 @@
 export default function Braille() {
     return (
-        <>braille</>
+        <>to be implemented</>
     )
 }
