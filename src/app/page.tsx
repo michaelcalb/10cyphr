@@ -5,6 +5,11 @@ import styles from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const decoders = [
+    'pigpen',
+    'braille',
+]
+
 export default function Home() {
 	return (
 		<div className={styles.page}>
@@ -15,12 +20,11 @@ export default function Home() {
 			<main className={styles.main}>
 				<fieldset className={styles.fieldset}>
                     <legend className={styles.legend}>EZdecoders</legend>
-					<Link href='/ez/pigpen' className={styles.link}>
-						<LeetText text='pigpen' />
-					</Link>
-					<Link href='/ez/braille' className={styles.link}>
-						<LeetText text='braille' />
-					</Link>
+                    {decoders.map(decoder => (
+                        <Link href={`ez/${decoder}`} className={styles.link} key={decoder}>
+                            <LeetText text={decoder} />
+                        </Link>
+                    ))}
                 </fieldset>
 			</main>
 		</div>
