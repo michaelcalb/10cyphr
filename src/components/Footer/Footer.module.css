@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgb(255, 255, 255, .5);
+    font-family: var(--font-pixel);
+}
+
+.link, .abbr {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    color: rgb(255, 255, 255, 1);
+}

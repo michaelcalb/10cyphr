@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import localFont from 'next/font/local'
+import Footer from '@/components/Footer/Footer'
 
 const pixel = localFont({
     src: [
@@ -44,7 +45,10 @@ export default function RootLayout({
 			lang='en'
 			className={`${geistSans.variable} ${geistMono.variable} ${pixel.variable}`}
 		>
-			<body>{children}</body>
+			<body>
+                {children}
+                <Footer />
+            </body>
 		</html>
 	)
 }
