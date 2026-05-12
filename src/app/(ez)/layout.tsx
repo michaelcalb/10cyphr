@@ -8,7 +8,7 @@ export default function EzLayout({
     return (
         <>
             <EzHeader />
-            <main>{children}</main>
+            {children}
         </>
     )
 }
