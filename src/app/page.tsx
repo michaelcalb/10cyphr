@@ -1,4 +1,4 @@
-'use client'
+/* 'use client' */
 
 import LeetText from '@/components/LeetText/LeetText'
 import styles from './page.module.css'
@@ -13,14 +13,15 @@ export default function Home() {
 				<h1 className={styles.title}>10cyphr</h1>
 			</header>
 			<main className={styles.main}>
-				<div className={styles.ezContainer}>
-					<Link href='/ez/pigpen'>
+				<fieldset className={styles.fieldset}>
+                    <legend className={styles.legend}>EZdecoders</legend>
+					<Link href='/ez/pigpen' className={styles.link}>
 						<LeetText text='pigpen' />
 					</Link>
-					<Link href='/ez/braille'>
+					<Link href='/ez/braille' className={styles.link}>
 						<LeetText text='braille' />
 					</Link>
-				</div>
+                </fieldset>
 			</main>
 		</div>
 	)

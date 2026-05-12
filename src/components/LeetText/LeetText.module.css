@@ -1,7 +1,8 @@
 .text {
 	display: inline-block;
 	font-family: var(--font-geist-mono);
-    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .char {
