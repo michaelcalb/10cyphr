@@ -5,19 +5,19 @@ import localFont from 'next/font/local'
 import Footer from '@/components/Footer/Footer'
 
 const pixel = localFont({
-    src: [
-        {
-            path: './fonts/PixelOperatorMono.ttf',
-            weight: '400',
-            style: 'normal',
-        },
-        {
-            path: './fonts/PixelOperatorMono-Bold.ttf',
-            weight: '700',
-            style: 'normal',
-        }
-    ],
-    variable: '--font-pixel',
+	src: [
+		{
+			path: './fonts/PixelOperatorMono.ttf',
+			weight: '400',
+			style: 'normal',
+		},
+		{
+			path: './fonts/PixelOperatorMono-Bold.ttf',
+			weight: '700',
+			style: 'normal',
+		},
+	],
+	variable: '--font-pixel',
 })
 
 const geistSans = Geist({
@@ -46,9 +46,11 @@ export default function RootLayout({
 			className={`${geistSans.variable} ${geistMono.variable} ${pixel.variable}`}
 		>
 			<body>
-                {children}
-                <Footer />
-            </body>
+				<div className='appShell'>
+					{children}
+					<Footer />
+				</div>
+			</body>
 		</html>
 	)
 }

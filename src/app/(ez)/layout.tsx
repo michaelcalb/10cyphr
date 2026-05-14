@@ -1,4 +1,5 @@
 import EzHeader from "./_components/EzHeader/EzHeader"
+import styles from './layout.module.css'
 
 export default function EzLayout({
   children,
@@ -8,7 +9,7 @@ export default function EzLayout({
     return (
         <>
             <EzHeader />
-            {children}
+            <div className={styles.content}>{children}</div>
         </>
     )
 }
