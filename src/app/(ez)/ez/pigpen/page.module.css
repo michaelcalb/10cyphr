@@ -2,14 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex: 1;
 }
 
 .pigpen {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .btn {
@@ -19,6 +21,11 @@
 
 .btn:hover {
     background: rgba(255, 255, 255, 0.1);
+    transition: background 0.1s;
+}
+
+.btn:active {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .tictactoe {
@@ -28,8 +35,8 @@
 }
 
 .tictactoe > *, .x > * {
-    border: 1px solid rgb(255, 255, 255);
-    width: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    width: min(100px, 30vw);
     aspect-ratio: 1 / 1;
 }
 
@@ -38,6 +45,48 @@
     grid-template-columns: repeat(2, 1fr);
     width: fit-content;
     transform: rotate(45deg);
+    margin: 50px;
+}
+
+.input {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 100%;
+    font-family: var(--font-geist-mono);
+    font-size: 1.2em;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 80%;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controlBtn {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.1s;
+}
+
+.controlBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* CELL BORDER CORRECTIONS */

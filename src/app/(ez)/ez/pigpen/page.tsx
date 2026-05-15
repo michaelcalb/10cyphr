@@ -56,9 +56,13 @@ export default function Pigpen() {
 					))}
 				</div>
 			</div>
-			<input type='text' value={output} readOnly />
-			<button onClick={handleDelete}>Delete</button>
-			<button onClick={handleClear}>Clear</button>
+			<div className={styles.output}>
+                <input type='text' value={output} readOnly className={styles.input} />
+                <div className={styles.controls}>
+                    <button className={styles.controlBtn} onClick={handleDelete}>Delete</button>
+                    <button className={styles.controlBtn} onClick={handleClear}>Clear</button>
+                </div>
+            </div>
 		</main>
 	)
 }

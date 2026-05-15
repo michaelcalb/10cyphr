@@ -31,3 +31,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+*::selection {
+    color: var(--background);
+    background: var(--foreground);
+}
