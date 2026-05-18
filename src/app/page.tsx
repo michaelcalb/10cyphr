@@ -44,7 +44,7 @@ export default function Home() {
 				suppressHydrationWarning
 				onClick={toggleCrt}
 			>
-				CRT: {crtEnabled ? 'On' : 'Off'}
+                Toggle CRT
 			</button>
 			<header className={styles.header}>
 				<Image src='/200.png' width={128} height={128} alt='Logo' />
