@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import localFont from 'next/font/local'
 import Footer from '@/components/Footer/Footer'
+import CrtPreference from '@/components/CrtPreference/CrtPreference'
 
 const pixel = localFont({
 	src: [
@@ -46,6 +47,7 @@ export default function RootLayout({
 			className={`${geistSans.variable} ${geistMono.variable} ${pixel.variable}`}
 		>
 			<body>
+				<CrtPreference />
 				<div className='appShell'>
 					{children}
 					<Footer />

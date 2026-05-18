@@ -25,10 +25,6 @@ export default function Home() {
 	useEffect(() => {
 		document.body.classList.toggle('crt-disabled', !crtEnabled)
 		localStorage.setItem('crtEnabled', crtEnabled.toString())
-
-		return () => {
-			document.body.classList.remove('crt-disabled')
-		}
 	}, [crtEnabled])
 
 	const toggleCrt = () => {
