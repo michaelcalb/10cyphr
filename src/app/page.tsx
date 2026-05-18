@@ -11,16 +11,29 @@ const decoders = [
     'braille',
 ]
 
+const getSavedCrtEnabled = () => {
+	if (typeof window === 'undefined') {
+		return true
+	}
+
+	return localStorage.getItem('crtEnabled') !== 'false'
+}
+
 export default function Home() {
-	const [crtEnabled, setCrtEnabled] = useState(true)
+	const [crtEnabled, setCrtEnabled] = useState(getSavedCrtEnabled)
 
 	useEffect(() => {
 		document.body.classList.toggle('crt-disabled', !crtEnabled)
+		localStorage.setItem('crtEnabled', crtEnabled.toString())
 
 		return () => {
 			document.body.classList.remove('crt-disabled')
 		}
 	}, [crtEnabled])
+
+	const toggleCrt = () => {
+		setCrtEnabled(enabled => !enabled)
+	}
 
 	return (
 		<div className={styles.page}>
@@ -28,7 +41,8 @@ export default function Home() {
 				type='button'
 				className={styles.crtToggle}
 				aria-pressed={crtEnabled}
-				onClick={() => setCrtEnabled(enabled => !enabled)}
+				suppressHydrationWarning
+				onClick={toggleCrt}
 			>
 				CRT: {crtEnabled ? 'On' : 'Off'}
 			</button>
