@@ -7,6 +7,24 @@
     gap: 4rem;
 }
 
+.crtToggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid #ffffff;
+    background: #000000;
+    color: #ffffff;
+    font-family: var(--font-pixel);
+    font-size: .8rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.crtToggle:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
 .header {
     display: flex;
     flex-direction: column;

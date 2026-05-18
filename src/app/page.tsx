@@ -1,9 +1,10 @@
-/* 'use client' */
+'use client'
 
 import LeetText from '@/components/LeetText/LeetText'
 import styles from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const decoders = [
     'pigpen',
@@ -11,8 +12,26 @@ const decoders = [
 ]
 
 export default function Home() {
+	const [crtEnabled, setCrtEnabled] = useState(true)
+
+	useEffect(() => {
+		document.body.classList.toggle('crt-disabled', !crtEnabled)
+
+		return () => {
+			document.body.classList.remove('crt-disabled')
+		}
+	}, [crtEnabled])
+
 	return (
 		<div className={styles.page}>
+			<button
+				type='button'
+				className={styles.crtToggle}
+				aria-pressed={crtEnabled}
+				onClick={() => setCrtEnabled(enabled => !enabled)}
+			>
+				CRT: {crtEnabled ? 'On' : 'Off'}
+			</button>
 			<header className={styles.header}>
 				<Image src='/200.png' width={128} height={128} alt='Logo' />
 				<h1 className={styles.title}>10cyphr</h1>
