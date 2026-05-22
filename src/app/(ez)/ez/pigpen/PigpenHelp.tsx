@@ -1,6 +1,6 @@
 export default function PigpenHelp() {
 
     return (
-        <p>this is pigpen</p>
+        <p>ezpigpen tutorial</p>
     )
 }

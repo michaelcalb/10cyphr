@@ -6,6 +6,7 @@ import PigpenHelp from '../../ez/pigpen/PigpenHelp'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import EzHelpModal from '../EzHelpModal/EzHelpModal'
+import BrailleHelp from '../../ez/braille/BrailleHelp'
 
 type DecoderHeader = {
     title: string,
@@ -16,6 +17,10 @@ const decoderHeaders: Record<string, DecoderHeader> = {
     '/ez/pigpen': {
         title: 'Pigpen',
         help: <PigpenHelp />
+    },
+    '/ez/braille': {
+        title: 'Braille',
+        help: <BrailleHelp />
     }
 }
 

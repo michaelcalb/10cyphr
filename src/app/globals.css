@@ -1,6 +1,8 @@
 :root {
 	--background: #000000;
 	--foreground: #ffffff;
+
+    --max-page-width: 800px;
 }
 
 * {
@@ -54,7 +56,7 @@ body.crt-disabled::before {
 
 .appShell {
 	width: 100%;
-	max-width: 800px;
+	max-width: var(--max-page-width);
 	flex: 1;
 	display: flex;
 	flex-direction: column;
