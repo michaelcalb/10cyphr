@@ -6,6 +6,22 @@
     width: 80%;
     max-width: 400px;
     gap: 10px;
+    position: relative;
+}
+
+.output::before {
+    content: 'Copied!';
+    position: absolute;
+    top: calc(50% + 10px);
+    left: 0;
+    color: white;
+    font-family: var(--font-pixel);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.output:has(.input:focus)::before {
+    opacity: 1;
 }
 
 .input {

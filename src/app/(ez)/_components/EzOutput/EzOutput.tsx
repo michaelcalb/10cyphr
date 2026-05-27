@@ -16,6 +16,10 @@ export default function EzOutput({ value, onChange }: EzOutputProps) {
 		onChange('')
 	}
 
+	const handleClick = () => {
+		navigator.clipboard.writeText(value)
+	}
+
 	return (
 		<div className={styles.output}>
 			<input
@@ -24,6 +28,7 @@ export default function EzOutput({ value, onChange }: EzOutputProps) {
 				readOnly
 				className={styles.input}
 				aria-label='Output'
+				onClick={handleClick}
 			/>
 			<div className={styles.controls}>
 				<button
