@@ -5,7 +5,7 @@ export default function PigpenHelp() {
 
     return (
         <>
-            <Image src="/pigpen_guide.png" alt="pigpen guide" width={400} height={400} className={styles.helpImg}/>
+            <Image src="/pigpen_help.png" alt="pigpen help" width={400} height={400} className={styles.helpImg}/>
             <div className={styles.helpSingleClick}>
                 <span className={styles.helpDrawing}></span>
                 <span className={styles.helpResult}>= Single Click</span>
