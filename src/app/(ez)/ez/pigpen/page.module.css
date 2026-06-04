@@ -65,3 +65,41 @@
 .tttCell6, .tttCell7, .tttCell8, .xCell2, .xCell3 {
     border-bottom: none;
 }
+
+.helpImg {
+    filter: invert();
+    
+
+}
+
+.helpSingleClick, .helpDoubleClick {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.helpDrawing {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.helpDoubleClick .helpDrawing::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    border: 5px solid white;
+    border-radius: 50%;
+    content: "";
+}
+
+.helpResult {
+    font-size: 1.2rem;
+    font-family: var(--font-geist-mono);
+}
