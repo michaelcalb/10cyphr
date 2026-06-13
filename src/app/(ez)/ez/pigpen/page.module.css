@@ -68,8 +68,9 @@
 
 .helpImg {
     filter: invert();
-    
-
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 .helpSingleClick, .helpDoubleClick {
@@ -81,8 +82,8 @@
 
 .helpDrawing {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     border: 2px solid white;
     position: relative;
 }
